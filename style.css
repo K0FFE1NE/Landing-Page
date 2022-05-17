@@ -1,14 +1,15 @@
 body {
     font-family: 'Courier New', sans-serif, monospace;
+    /* removing default margin of the body */
     margin: 0;
-    height:100vh;
+    /* height = height of viewbox */
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 body>* {
     padding: 0 200px 0 200px;
-    flex: auto;
 }
 
 ul {
@@ -19,19 +20,44 @@ ul {
     color: #F9FAF8;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    height: 100px;
+}
+
+.header a {
+    color: #F9FAF8;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
 .hero-container {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    gap: 75px;
+    gap: 24px;
     justify-content: center;
     align-items: center;
     background-color: #1F2937;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-    width: 600px;
-    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.hero-container, 
+.hero-content >* {
+    flex: 0 1 0;
 }
 
 .hero-content .message {
@@ -45,8 +71,6 @@ ul {
     margin: 10px 0 10px 0;
     font-size: 18px;
     color: #E5E7EB;
-    display: flex;
-    flex-direction: column;
 }
 
 .hero-content .support {
@@ -54,28 +78,11 @@ ul {
     color: #E5E7EB;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1F2937;
-    color: #F9FAF8;
-    max-height: 90px;
-}
-
-.header a {
-    color: #F9FAF8;
-    text-decoration: none;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}
-
-
-.hero img {
-    background-color: grey;
-    flex-shrink: 1;
+.hero-container img {
+    /* width and height added to allow flex shrinking */
+    width: 100%;
+    height: auto;
+    flex: 0 1 0;
 }
 
 .awe-inspiring-quote {
@@ -83,7 +90,12 @@ ul {
 }
 
 .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
     margin-top: auto;
     background-color: #1F2937;
     color: #F9FAF8;
+    height: 90px;
 }
