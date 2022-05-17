@@ -1,70 +1,66 @@
 body {
+    font-family: 'Courier New', sans-serif, monospace;
+    margin: 0;
+    height:100vh;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
-    font-family: 'Courier New', sans-serif, monospace;
 }
 
 body>* {
     padding: 0 200px 0 200px;
+    flex: auto;
 }
 
-.head,
-.footer {
-    background-color: #1F2937;
+ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    gap: 16px;
     color: #F9FAF8;
 }
 
-.welcome {
+.hero-container {
     display: flex;
-    padding: 32px 0 32px 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
     gap: 75px;
     justify-content: center;
     align-items: center;
+    background-color: #1F2937;
 }
 
-.welcome .content {
-    width: 400px;
+.hero-content {
+    width: 600px;
     flex-shrink: 1;
 }
 
-.welcome .message {
+.hero-content .message {
     font-size: 48px;
     font-weight: 900;
     color: #F9FAF8;
     margin: 0;
 }
 
-.welcome .about {
+.hero-content .about {
     margin: 10px 0 10px 0;
     font-size: 18px;
     color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
 }
 
-.welcome .support {
+.hero-content .support {
     font-size: 12px;
     color: #E5E7EB;
 }
 
-.welcome ul {
-    list-style-type: none;
-    padding: 0px;
-    display: flex;
-    gap: 18px;
-}
-
-.head .header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.head .header ul {
-    list-style-type: none;
-    padding: 0px;
-    display: flex;
-    gap: 10px;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    max-height: 90px;
 }
 
 .header a {
@@ -73,16 +69,21 @@ body>* {
 }
 
 .header a:hover {
-    color: #F9FAF8;
     text-decoration: underline;
 }
 
-.welcome .about {
-    display: flex;
-    flex-direction: column;
-}
 
-.welcome img {
+.hero img {
     background-color: grey;
     flex-shrink: 1;
+}
+
+.awe-inspiring-quote {
+    background-color: #E5E7EB;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #1F2937;
+    color: #F9FAF8;
 }
