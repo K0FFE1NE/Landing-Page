@@ -9,7 +9,7 @@ body {
 }
 
 body>* {
-    padding: 0 200px 0 200px;
+    padding: 0 250px 0 250px;
 }
 
 ul {
@@ -27,6 +27,8 @@ ul {
     background-color: #1F2937;
     color: #F9FAF8;
     height: 100px;
+    /* Prevent over-shrinkage of the header */
+    flex: 0 0 auto;
 }
 
 .header a {
@@ -42,10 +44,11 @@ ul {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    gap: 24px;
+    gap: 18px;
     justify-content: center;
     align-items: center;
     background-color: #1F2937;
+    /* item wrapping to better accomodate page shrinking */
     flex-wrap: wrap;
 }
 
@@ -53,11 +56,7 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-}
-
-.hero-container, 
-.hero-content >* {
-    flex: 0 1 0;
+    flex: 1;
 }
 
 .hero-content .message {
@@ -65,6 +64,7 @@ ul {
     font-weight: 900;
     color: #F9FAF8;
     margin: 0;
+
 }
 
 .hero-content .about {
@@ -76,17 +76,31 @@ ul {
 .hero-content .support {
     font-size: 12px;
     color: #E5E7EB;
+
 }
 
 .hero-container img {
     /* width and height added to allow flex shrinking */
     width: 100%;
     height: auto;
+    /* ensures images takes up the same screen real estate unless the screen
+    is very small. */
     flex: 0 1 0;
 }
 
 .awe-inspiring-quote {
     background-color: #E5E7EB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.awe-inspiring-quote .quote {
+    font-size: 36px;
+}
+
+.awe-inspiring-quote .quote-auth {
+    margin-left: auto;
 }
 
 .footer {
@@ -98,4 +112,6 @@ ul {
     background-color: #1F2937;
     color: #F9FAF8;
     height: 90px;
+    /* Prevent over-shrinkage of the footer */
+    flex: 0 0 auto;
 }
