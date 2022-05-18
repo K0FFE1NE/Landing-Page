@@ -9,7 +9,7 @@ body {
 }
 
 body>* {
-    padding: 0 250px 0 250px;
+    padding: 0 200px 0 200px;
 }
 
 ul {
@@ -76,7 +76,6 @@ ul {
 .hero-content .support {
     font-size: 12px;
     color: #E5E7EB;
-
 }
 
 .hero-container img {
@@ -93,21 +92,63 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.rand-inf h2 {
+    font-size: 32px;
+}
+
+.rand-inf .items {
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.items >* {
+    flex: 1;
+}
+
+.items img {
+    border-color: #3882F6;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+/* ensuring subtext is centered with its img at all time. */
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtext {
+    font-size: 12px;
+    color: #2F4F4F;
+    max-width: 200px;
 }
 
 .awe-inspiring-quote {
     background-color: #E5E7EB;
+}
+
+.quote-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.awe-inspiring-quote .quote {
+.quote-container .quote {
     font-size: 36px;
 }
 
-.awe-inspiring-quote .quote-auth {
+.quote-container .quote-auth {
     margin-left: auto;
 }
 
@@ -131,6 +172,7 @@ ul {
     align-items: center;
     width: 100%;
     height: auto;
+    max-width: 800px
 }
 
 .popup button {
