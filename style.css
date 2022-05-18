@@ -93,6 +93,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .awe-inspiring-quote .quote {
@@ -101,6 +102,40 @@ ul {
 
 .awe-inspiring-quote .quote-auth {
     margin-left: auto;
+}
+
+.popup {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ensures popup takes up all available space 'allocated' to it */
+    flex: 1;
+}
+
+.popup .bubble {
+    background-color: #3882F6;
+    padding: 16px 32px;
+    border-radius: 8px;
+    color: #F9FAF8;
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.popup button {
+    /* min values ensures the button doesn't deform */
+    min-width: 100px;
+    min-height: 30px;
+    margin-left: auto;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border-color: #F9FAF8;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 .footer {
@@ -115,3 +150,4 @@ ul {
     /* Prevent over-shrinkage of the footer */
     flex: 0 0 auto;
 }
+
